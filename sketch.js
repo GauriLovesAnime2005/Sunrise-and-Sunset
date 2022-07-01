@@ -5,6 +5,7 @@ const Constraint = Matter.Constraint;
 
 var engine, world;
 var backgroundImg;
+var hour; 
 
 var bg = "sunrise1.png";
 
@@ -23,7 +24,7 @@ function draw(){
 
     // add condition to check if any background image is there to add
     if(backgroundImg){
-        backgroundImg(backgroungImg)
+        background(backgroundImg)
     }
 
 
@@ -71,10 +72,10 @@ async function getBackgroundImg(){
       bg="sunset8.png"
     }else if(hour>=20&&hour<=22){
       bg="sunset9.png"
-    }else if(hour>=22&&hour<=24){
+    }else{
       bg="sunset10.png"
-    }else if(hour>=00&&hour<=03){
-
+    }
+      
 
 
 
@@ -84,5 +85,5 @@ async function getBackgroundImg(){
     console.log(backgroundImg);
    
 
-}
+
 }
